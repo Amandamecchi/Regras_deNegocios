@@ -17,3 +17,5 @@ INSERT INTO ingresso (nome, email, evento, data_evento, local_evento, preco) VAL
 INSERT INTO ingresso (nome, email, evento, data_evento, local_evento, preco) VALUES ('gioca', 'gioca@gmail.com', 'Rodeio', '2025-05-10', 'Jaguariuna', 350.00);
 
 INSERT INTO ingresso (nome, email, evento, data_evento, local_evento, preco) VALUES ('Flavinha', 'flavinha@gmail.com', 'Rodeio', '2025-05-10', 'Jaguariuna', 350.00);
+
+SELECT * FROM ingresso;
