@@ -4,18 +4,16 @@ CREATE DATABASE evento;
 
 CREATE TABLE ingresso (
     id SERIAL PRIMARY KEY,
-    nome VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL,
     evento VARCHAR(255) NOT NULL,
     data_evento DATE NOT NULL,
     local_evento VARCHAR(255) NOT NULL,
-    preco DECIMAL(10, 2) NOT NULL
+    categoria VARCHAR(255) NOT NULL,
+    preco DECIMAL(10, 2) NOT NULL,
+    quantidade_disponivel INTEGER NOT NULL
 );
 
-INSERT INTO ingresso (nome, email, evento, data_evento, local_evento, preco) VALUES ('JULIA', 'julia@gmail.com', 'SHOW', '2025-05-20', 'Festa do figo', 100.00);
-
-INSERT INTO ingresso (nome, email, evento, data_evento, local_evento, preco) VALUES ('gioca', 'gioca@gmail.com', 'Rodeio', '2025-05-10', 'Jaguariuna', 350.00);
-
-INSERT INTO ingresso (nome, email, evento, data_evento, local_evento, preco) VALUES ('Flavinha', 'flavinha@gmail.com', 'Rodeio', '2025-05-10', 'Jaguariuna', 350.00);
+INSERT INTO ingresso (evento, data_evento, local_evento, categoria, preco, quantidade_disponivel) VALUES ('Show de Jorge e Matheus', '19/09/2025', 'Allianz Parque', 'Pista', 500.00, 1000);
+INSERT INTO ingresso (evento, data_evento, local_evento, categoria, preco, quantidade_disponivel) VALUES ('Show de rock', '20/05/2025', 'Allianz Parque', 'Cadeira', 800.00, 500);
+INSERT INTO ingresso (evento, data_evento, local_evento, categoria, preco, quantidade_disponivel) VALUES ('Show da Anitta', '10/06/2025', 'Allianz Parque', 'Camarote', 1500.00, 200);
 
 SELECT * FROM ingresso;
